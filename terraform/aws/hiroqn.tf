@@ -40,5 +40,5 @@ resource "aws_iam_user_policy" "hiroqn_policy" {
 }
 EOF
 
-  user = "hiroqn"
+  user = "${aws_iam_user.hiroqn.name}"
 }

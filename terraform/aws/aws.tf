@@ -23,3 +23,11 @@ resource "aws_s3_bucket" "hiroqn_tfstate" {
   acl           = "private"
   force_destroy = true
 }
+
+terraform {
+  backend "s3" {
+    bucket = "hiroqn-tfstate"
+    key    = "terraform.tfstate"
+    region = "ap-northeast-1"
+  }
+}
